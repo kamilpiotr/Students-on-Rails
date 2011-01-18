@@ -1,9 +1,9 @@
 StudentsOnRails::Application.routes.draw do
-  # resources :places
+  # resources :comments
 
-#resources :places do
-#  resources :comments
-#end
+resources :places do
+  resources :comments
+end
 
 
   # The priority is based upon order of creation:
