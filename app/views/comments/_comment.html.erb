@@ -1,0 +1,11 @@
+<% div_for comment do %>
+	<% if comment.tekst != "" && comment.autor != "" %>
+	<p>
+	<strong> Utworzony <%= comment.created_at %></strong></br />
+	przez <%=h comment.autor %><br />
+	<div style="float:left;margin-right:5px;margin-bottom:5px;"><%= image_tag comment.gravatar_url(:rating => 'R', :size => 50) %></div>
+	<%=h comment.tekst %>
+	<br style="clear:both;" />
+	</p>
+	<% end %>
+<% end %>
