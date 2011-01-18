@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Ap::Application.config.secret_token = 'dae03b957786a981ffe350f1e2e5a11481a6553ad2cba12908ffa3160346aba52457bf08d0af19ca80e1a808e785d7028e191e4f7155664a1aacc3a69bd6fefc'
+StudentsOnRails::Application.config.secret_token = '530cce9d5d740630683f02fc6a3f8d00f9fa4ee9f39d4efe61acb5b99852b50f983fe8d4e7dfb4e1a2d3faf1d674c535d0304d4f19b5c61bc5d375bd2d72a7eb'

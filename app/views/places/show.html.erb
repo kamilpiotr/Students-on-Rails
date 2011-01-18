@@ -1,0 +1,92 @@
+<br style="clear:both;"/><%= link_to 'Edycja', edit_place_path(@place) %> |
+<%= link_to 'Cofnij', places_path %>
+<p id="notice"><%= notice %></p>
+<div style="float:left;margin-right:10px;margin-bottom:10px;">
+<div id="fota">
+ <a href="<%= @place.photo.url(:medium) %>" title="<%= @place.nazwa %>">
+                  
+<%= image_tag @place.photo.url(:small) %>
+            </a>
+
+</div>
+
+</div>
+<p>
+  <b>Imie:</b>
+  <%= @place.nazwa %>
+</p>
+
+<p>
+  <b>Województwo:</b>
+  <%= @place.wojewodztwo %>
+</p>
+<p>
+<b>Miasto:</b>
+  <%= @place.miasto %>
+</p>
+
+<p>
+  <b>Ulica:</b>
+  <%= @place.ulica %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @place.autor %> ( <%= @place.created_at %>)
+</p>
+<br style="clear:both;"/>
+
+
+<p style="float:left;width:400px;">
+  <%= @place.opis.html_safe %>
+</p>
+<div id="map_canvas" style="float:right;width:500px;height:300px;margin:10px;"></div>
+<br style="clear:both;"/>
+
+
+
+<hr />
+
+  <h2>Komentarze</h2>
+  <div id="comments">
+   <%= render :partial => @place.comments %>
+  </div>
+  
+  
+<hr style="width:400px;float:left;"/>
+	<br style="clear:both;" />
+  <% simple_form_for [@place,Comment.new] do |f| %>
+
+    <div><%= f.input :autor, :label => 'Autor' %></div><br /><br style="clear:both;" />
+	<div><%= f.input :email, :label => 'E-mail' %></div><br /><br style="clear:both;" />
+Tekst<div><%= f.text_area :tekst ,:rows => 10 , :cols => 69 %></div>
+    <%= f.submit "Dodaj Komentarz" %>
+
+<% end %>
+	
+<script type="text/javascript">
+
+   var query = "<%= @place.wojewodztwo %>, <%= @place.miasto %>  <%= @place.ulica %>";
+  function codeAddress() {
+    var address = query;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map, 
+            position: results[0].geometry.location
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+</script>
+<script type="text/javascript">
+
+				   $j(document).ready(function() {
+          $j("#map").gMap({ address: "<%= @place.wojewodztwo %>, <%= @place.miasto %>  <%= @place.ulica %>",
+                  zoom: 13 });
+
+      });
+</script>

@@ -1,0 +1,10 @@
+en:
+  flash:
+    actions:
+      create:
+        notice: 'Miejsce poprawnie utworzono!'
+      update:
+        notice: 'Miejsce poprawnie edytowano!'
+      destroy:
+        notice: 'Miejsce poprawnie usunięte!'
+        alert: 'Miejsce nie może zostać usunięte'

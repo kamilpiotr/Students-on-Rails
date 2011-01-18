@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Ap::Application.load_tasks
+StudentsOnRails::Application.load_tasks

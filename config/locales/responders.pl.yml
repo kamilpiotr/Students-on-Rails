@@ -1,0 +1,10 @@
+pl:
+  flash:
+    actions:
+      create:
+        notice: '%{resource_name} was successfully utworzono.'
+      update:
+        notice: '%{resource_name} was successfully uaktualniono.'
+      destroy:
+        notice: '%{resource_name} was successfully usuniêto.'
+        alert: '%{resource_name} could not be usun¹æ.'

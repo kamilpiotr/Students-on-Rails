@@ -1,0 +1,12 @@
+<% simple_form_for @place, :html => { :multipart => true } do |f| %>
+
+    <div><%= f.input :nazwa, :label => 'Nazwa' %></div><br style="clear:both;"/><br />
+	<div><%= f.input :wojewodztwo, :label => 'Województwo' %></div><br style="clear:both;"/><br />
+	<div><%= f.input :miasto, :label => 'miasto' %></div><br style="clear:both;"/><br />
+	<div><%= f.input :ulica, :label => 'Ulica (nr)' %></div><br style="clear:both;"/><br />
+	<div><%= f.input :autor, :label => 'Autor' %></div><br style="clear:both;"/><br />
+	<div><%= f.text_area :opis %></div><br style="clear:both;"/><br />
+	<div><%= f.file_field :photo %></div><br style="clear:both;"/><br />
+    <%= f.submit "Zapisz Miejsce" %>
+
+<% end %>
