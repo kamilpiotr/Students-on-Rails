@@ -1,0 +1,12 @@
+-- NAZWA --
+"Students on Rails"
+
+-- DRUŻYNA--
+* Kamil Kurowski
+* Bartek Kosakowski
+
+-- OPIS PROJEKTU --
+Witryna z bazą ciekawych miejsc w Polsce. Z możliwością wyszukiwania, dodawania nowych lub też edycji. Gość na stronie będzie mógł oceniać dane miejsce oraz skomentować je. Dostępna będzie mapka Google jak trafić w owe miejsce oraz galeria zdjęć.
+
+-- INFO --
+Serwis będzie głownie kładł nacisk na na wygląd, oraz wszelakie efekty np. w jQuery
