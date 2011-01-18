@@ -1,3 +1,18 @@
+Projekt zaliczeniowy:
+
+-- NAZWA --
+"Students on Rails"
+
+-- DRUŻYNA--
+* Kamil Kurowski
+* Bartek Kosakowski
+
+-- OPIS PROJEKTU --
+Witryna z bazą ciekawych miejsc w Polsce. Z możliwością wyszukiwania, dodawania nowych lub też edycji. Gość na stronie będzie mógł oceniać dane miejsce oraz skomentować je. Dostępna będzie mapka Google jak trafić w owe miejsce oraz galeria zdjęć.
+
+-- INFO --
+Serwis będzie głownie kładł nacisk na na wygląd, oraz wszelakie efekty np. w jQuery 
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
@@ -255,18 +270,3 @@ vendor
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
 =======
-Projekt zaliczeniowy:
-
--- NAZWA --
-"Students on Rails"
-
--- DRUŻYNA--
-* Kamil Kurowski
-* Bartek Kosakowski
-
--- OPIS PROJEKTU --
-Witryna z bazą ciekawych miejsc w Polsce. Z możliwością wyszukiwania, dodawania nowych lub też edycji. Gość na stronie będzie mógł oceniać dane miejsce oraz skomentować je. Dostępna będzie mapka Google jak trafić w owe miejsce oraz galeria zdjęć.
-
--- INFO --
-Serwis będzie głownie kładł nacisk na na wygląd, oraz wszelakie efekty np. w jQuery 
->>>>>>> 676d33f5b753bc03066da7fc9f555793a94689fc
